@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.header-ul {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+}
+
+.header-li {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-a {
+  text-decoration: none;
+  color: #6f8798;
+  font-family: "inter", sans-serif;
+  font-size: 20px;
+}
