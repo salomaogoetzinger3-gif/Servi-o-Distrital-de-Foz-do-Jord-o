@@ -1,0 +1,48 @@
+.text-servics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+}
+
+.text-servics-subtitulo {
+  font-size: 25px;
+  font-weight: 300;
+  color: #6f8798;
+}
+
+.text-servics-titulo {
+  font-size: 40px;
+  font-weight: 500;
+  color: #294a63;
+}
+
+.grid-servics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 0 78px;
+}
+
+.list-servics {
+  padding: 50px;
+  list-style: none;
+  background-color: #f5fafd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.servics {
+  text-decoration: none;
+  color: #294a63;
+  font-size: 24px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragraf-servics {
+  color: #6f8798;
+}

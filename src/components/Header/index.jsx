@@ -26,7 +26,7 @@ export function Header() {
           </a>
         </li>
       </ul>
-      <a className="header-a" href="#">
+      <a className="header-a1" href="#">
         Agendar atendimento
       </a>
     </section>

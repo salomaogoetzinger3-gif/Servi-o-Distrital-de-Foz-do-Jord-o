@@ -3,6 +3,8 @@ import "./hero.style.css";
 export function Hero() {
   return (
     <section className="hero">
+      <img src="/logo-cartorio.png" alt="" />
+      <hr className="hr1" />
       <div className="hero-texto">
         <p className="info">Serviço, segurança e cidadania</p>
         <h1 className="titulo">NOSSO COMPROMISSO</h1>
@@ -15,7 +17,6 @@ export function Hero() {
           Conheça nossos serviços
         </a>
       </div>
-      <img className="hero-img" src="/Hero photograph.png" alt="" />
     </section>
   );
 }
