@@ -14,7 +14,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
-  padding: 10vw;
+  padding: 10vw 0;
 }
 
 .address-text {
@@ -44,4 +44,36 @@
   font-size: 24px;
   line-height: 155%;
   font-weight: 400;
+}
+
+.address-info-1 {
+  background-color: #d8e9f2;
+}
+
+.address-info-lista {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 2vw;
+}
+
+.address-info-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.address-info-texto1 {
+  color: #6f8798;
+  font-size: 24px;
+  line-height: 155%;
+  font-weight: 300;
+}
+
+.address-info-texto2 {
+  color: #294a63;
+  font-size: 24px;
+  line-height: 108%;
+  font-weight: 500;
 }
