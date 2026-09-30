@@ -1,0 +1,47 @@
+.address {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  max-width: 100%;
+  background:
+    linear-gradient(
+      to left,
+      #eef4fa 0%,
+      #eef4fa 48%,
+      rgba(238, 244, 250, 0) 100%
+    ),
+    url("/foto-cartorio-address.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  padding: 10vw;
+}
+
+.address-text {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 2;
+  margin: 0 auto;
+}
+
+.address-titulo {
+  color: #294a63;
+  font-size: 58px;
+  line-height: 108%;
+  font-weight: 300;
+}
+
+.hr {
+  width: 100px;
+  border: 3px solid #1aa7d9;
+  border-radius: 50px;
+}
+
+.address-paragrafo {
+  color: #6f8798;
+  font-size: 24px;
+  line-height: 155%;
+  font-weight: 400;
+}
