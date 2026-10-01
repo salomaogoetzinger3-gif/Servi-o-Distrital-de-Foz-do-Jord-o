@@ -32,3 +32,38 @@
   background-color: #1aa7d9;
   color: #fff;
 }
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  transition:
+    width 0.3s ease,
+    opacity 0.3s ease,
+    padding 0.3s ease;
+}
+
+.search-input.aberto {
+  width: 400px;
+  padding: 12px;
+  border: 1px solid #1aa7d9;
+  border-radius: 50px;
+  opacity: 1;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.fi-rs-search {
+  font-size: 20px;
+}

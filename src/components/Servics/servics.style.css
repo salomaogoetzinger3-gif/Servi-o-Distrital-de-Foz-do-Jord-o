@@ -27,11 +27,16 @@
 }
 
 .list-servics {
-  padding: 50px;
+  padding: 50px 0;
   list-style: none;
   background-color: #f5fafd;
   border-radius: 8px;
   text-align: center;
+}
+
+.list-servics:hover {
+  background-color: #b7dbf1;
+  transition: 0.3s;
 }
 
 .servics {
@@ -46,4 +51,5 @@
 
 .paragraf-servics {
   color: #6f8798;
+  font-size: 16px;
 }

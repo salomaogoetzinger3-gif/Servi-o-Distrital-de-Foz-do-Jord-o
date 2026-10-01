@@ -1,6 +1,8 @@
 import "./address.style.css";
 
 export function Address() {
+  const endereco =
+    "R. Prof. Parigot de Souza, 41 - Centro, Foz do Jordão - PR, 85145-000";
   return (
     <>
       <section className="address">
@@ -16,35 +18,24 @@ export function Address() {
             praticidade para a população. Trabalhamos com ética, transparência e
             compromisso com o seu bem mais valioso: sua hisória.
           </p>
+          <section className="mapa">
+            <iframe
+              title="Localização do Serviço Distrital de Foz do Jordão"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(endereco)}&z=17&output=embed`}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </section>
+          <a
+            className="button-map"
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(endereco)}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Abrir no Google Maps
+          </a>
         </div>
-      </section>
-      <section className="address-info-1">
-        <ul className="address-info-lista">
-          <li className="address-info-item">
-            <h4 className="address-info-texto1">Endereço</h4>
-            <h2 className="address-info-texto2">Rua Parigot de Souza, 44</h2>
-          </li>
-          <li className="address-info-item">
-            <h4 className="address-info-texto1">Telefone</h4>
-            <h2 className="address-info-texto2">+55 (47) 99992-7505</h2>
-          </li>
-          <li className="address-info-item">
-            <h4 className="address-info-texto1">E-MAIL</h4>
-            <h2 className="address-info-texto2">
-              servicodistritalfozdojordao@registrocivil.org.br
-            </h2>
-          </li>
-          <li className="address-info-item">
-            <h4 className="address-info-texto1">Horário de Atendimento</h4>
-            <h2 className="address-info-texto2">
-              Segunda á Sexta
-              <br />
-              08:30 às 11:15
-              <br />
-              13:00 às 17:00
-            </h2>
-          </li>
-        </ul>
       </section>
     </>
   );
