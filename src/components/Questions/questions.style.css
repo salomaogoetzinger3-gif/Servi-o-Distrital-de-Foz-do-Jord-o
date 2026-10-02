@@ -69,6 +69,9 @@ input[type="checkbox"] {
   font-size: 16px;
   max-height: 0;
   overflow: hidden;
+  transition:
+    max-height 0.5s,
+    padding 0.5;
 }
 
 input[type="checkbox"]:checked + .question-label + .response {

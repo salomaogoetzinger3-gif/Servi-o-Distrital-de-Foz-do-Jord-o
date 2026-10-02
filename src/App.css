@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Playfair+Display:wght@500;600&family=Public+Sans:wght@400;500;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,35 @@
 
 :root {
   --pad: clamp(16px, 5vw, 78px);
-  --gutter: max(var(--pad), calc((100vw - 1680px) / 2));
+  --gutter: 4vw;
+  /* Cores principais */
+  --azul-marinho: #0a1f3f; /* cor principal: botões, títulos, bloco de Notas */
+  --azul-noite: #03122a; /* rodapé e parte mais escura do topo */
+  --dourado: #c9a24d; /* ornamentos, linhas, ícones, bordas */
+  --dourado-claro: #e3c98a; /* detalhes sobre fundo escuro */
+
+  /* Cores de apoio */
+  --branco-gelo: #f4f5f7; /* fundo das seções claras */
+  --tinta: #121a2b; /* texto principal */
+  --cinza-azulado: #5a6475; /* textos secundários */
+  --linha: #dde1e8; /* divisórias e bordas */
+  --texto-sobre-azul: #c3cbda; /* parágrafos sobre fundo escuro */
+  --verde-aberto: #2e9e5e; /* indicador "Aberto agora" */
+
+  /* Degradês */
+  --degrade-topo: linear-gradient(
+    180deg,
+    #123056 0%,
+    #0a1f3f 45%,
+    #03122a 100%
+  );
+  --degrade-botao-dourado: linear-gradient(180deg, #d9b766, #b98f3a);
+  --degrade-bloco-azul: linear-gradient(180deg, #0e2648, #061732);
+
+  /* Fontes */
+  --fonte-logo: "Playfair Display SC", Georgia, serif; /* "Serviço Distrital" */
+  --fonte-titulos: "Playfair Display", Georgia, serif; /* títulos de seção */
+  --fonte-texto: "Public Sans", Arial, sans-serif; /* textos e botões */
 }
 
 html {
@@ -16,6 +45,9 @@ html {
 
 body {
   overflow-x: hidden;
+  background: var(--branco-gelo);
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
 }
 
 img,

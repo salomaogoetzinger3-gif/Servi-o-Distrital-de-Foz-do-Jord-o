@@ -3,19 +3,26 @@ import "./hero.style.css";
 export function Hero() {
   return (
     <section className="hero">
-      <img className="hero-logo" src="/logo-cartorio.png" alt="" />
-      <hr className="hr1" />
       <div className="hero-texto">
-        <p className="info">Serviço, segurança e cidadania</p>
-        <h1 className="titulo">NOSSO COMPROMISSO</h1>
-        <hr className="hr" />
-        <p className="subtitulo">
-          Garantir segurança jurídica e acolhimento em todos os momentos
-          importantes da sua vida.
+        <h1 className="titulo">
+          SERVIÇO DISTRITAL <span>DE FOZ DO JORDÃO</span>
+          <hr className="hr" />
+          <p className="subtitulo">
+            Tabelionato de Notas e Registro Civil de Pessoas Naturais
+          </p>
+        </h1>
+        <p className="info">
+          Nascimento, casamento, procurações, escrituras e reconhecimento de
+          firma, com fé pública e atendimento aqui na cidade
         </p>
-        <a className="servicos" href="#">
-          Conheça nossos serviços
-        </a>
+        <div className="hero-btn-align">
+          <a href="#" className="hero-btn-1">
+            Ver serviços
+          </a>
+          <a href="#" className="hero-btn-2">
+            Solicitar 2ª Via de certidão
+          </a>
+        </div>
       </div>
     </section>
   );

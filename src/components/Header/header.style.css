@@ -4,19 +4,13 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  margin: 20px;
-}
-
-@media (min-width: 1680px) {
-  .header {
-    margin: 20px var(--gutter);
-  }
+  padding: 16px var(--gutter);
+  background-color: #0e2648;
 }
 
 .header-logo {
   display: block;
-  width: 280px;
-  max-width: 100%;
+  width: clamp(140px, 16vw, 200px);
   flex-shrink: 1;
   min-width: 0;
 }
@@ -24,13 +18,12 @@
 .header-ul {
   display: flex;
   list-style: none;
-  gap: clamp(24px, 4vw, 60px);
+  gap: clamp(16px, 3vw, 60px);
 }
 
 .header-li {
-  text-decoration: none;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -41,13 +34,14 @@
 .header-a {
   text-decoration: none;
   color: #6f8798;
-  font-family: "inter", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
 }
+
 .header-a1 {
   text-decoration: none;
   font-size: 16px;
-  padding: 16px;
+  padding: 14px 20px;
   border-radius: 50px;
   background-color: #1aa7d9;
   color: #fff;
@@ -57,12 +51,13 @@
 .search {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   flex-shrink: 0;
 }
 
 .search-input {
   width: 0;
+  min-width: 0;
   padding: 0;
   border: none;
   opacity: 0;
@@ -73,7 +68,7 @@
 }
 
 .search-input.aberto {
-  width: clamp(160px, 22vw, 400px);
+  width: clamp(140px, 16vw, 300px);
   padding: 12px;
   border: 1px solid #1aa7d9;
   border-radius: 50px;
@@ -84,6 +79,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: #fff;
 }
 
 .fi-rs-search {
@@ -107,7 +103,7 @@
   display: block;
   height: 2px;
   width: 100%;
-  background-color: #294a63;
+  background-color: #fff;
   border-radius: 2px;
   transition:
     transform 0.25s ease,
@@ -124,15 +120,10 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Tablet e celular */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .header {
-    margin: 16px;
+    padding: 16px;
     gap: 12px;
-  }
-
-  .header-logo {
-    width: 220px;
   }
 
   .menu-btn {
@@ -141,6 +132,7 @@
 
   .search {
     gap: 12px;
+    margin-left: auto;
   }
 
   .header-ul {
@@ -180,11 +172,8 @@
   }
 }
 
+/* Celular pequeno */
 @media (max-width: 520px) {
-  .header-logo {
-    width: 170px;
-  }
-
   .header-a1 {
     display: none;
   }
