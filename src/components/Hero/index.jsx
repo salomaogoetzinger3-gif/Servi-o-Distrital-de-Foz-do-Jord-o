@@ -3,7 +3,7 @@ import "./hero.style.css";
 export function Hero() {
   return (
     <section className="hero">
-      <img src="/logo-cartorio.png" alt="" />
+      <img className="hero-logo" src="/logo-cartorio.png" alt="" />
       <hr className="hr1" />
       <div className="hero-texto">
         <p className="info">Serviço, segurança e cidadania</p>

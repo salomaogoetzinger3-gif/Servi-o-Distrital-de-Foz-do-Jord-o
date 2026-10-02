@@ -5,7 +5,7 @@ export function Footer() {
     <>
       <section className="footer">
         <div className="footer-img-text">
-          <img width={400} src="/logo-servico-distrital.png" alt="" />
+          <img className="footer-logo" width={400} src="/logo-servico-distrital.png" alt="" />
           <p className="footer-paragraf">
             Serviços de registro civil com segurança jurídica, acolhimento e
             compromisso com a cidadania.

@@ -4,6 +4,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  --pad: clamp(16px, 5vw, 78px);
+  --gutter: max(var(--pad), calc((100vw - 1680px) / 2));
+}
+
 html {
   font-family: "inter", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+h1,
+h2,
+h4,
+p,
+a,
+label {
+  overflow-wrap: break-word;
 }
