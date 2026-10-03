@@ -1,0 +1,130 @@
+.informations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #fff;
+  border-bottom: 1px solid #c3cbda;
+}
+
+.informations > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  height: 100%;
+  padding: clamp(20px, 2.2vw, 30px);
+}
+
+.informations > div {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.informations > div + div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  border-left: 1px solid #c3cbda;
+}
+
+.informations > div > i {
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.informations-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.informations-text h3 {
+  color: #03122a;
+  font-size: 1.15rem;
+}
+
+.informations-text p {
+  color: #5a6475;
+  font-size: 1rem;
+}
+
+/* telas grandes */
+@media (min-width: 1600px) {
+  .informations > div {
+    padding: 36px 40px;
+  }
+
+  .informations-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .informations-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* notebooks / desktops pequenos */
+@media (max-width: 1100px) {
+  .informations > div {
+    gap: 10px;
+    padding: 18px 14px;
+  }
+
+  .informations-text h3 {
+    font-size: 1.05rem;
+  }
+
+  .informations-text p,
+  .informations-text strong {
+    font-size: 0.9rem;
+  }
+}
+
+/* tablet: itens empilhados, divisória horizontal */
+@media (max-width: 900px) {
+  .informations {
+    grid-template-columns: 1fr;
+  }
+
+  .informations > div {
+    justify-content: flex-start;
+    padding: 18px 24px;
+  }
+
+  .informations > div + div::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 0;
+    border-left: 0;
+    border-top: 1px solid #c3cbda;
+  }
+}
+
+/* celular */
+@media (max-width: 480px) {
+  .informations > div {
+    gap: 12px;
+    padding: 16px;
+    justify-content: center;
+  }
+
+  .informations > div > i {
+    font-size: 1.1rem;
+    width: 22px;
+  }
+
+  .informations-text h3 {
+    font-size: 1rem;
+  }
+
+  .informations-text p,
+  .informations-text strong {
+    font-size: 0.875rem;
+  }
+}
