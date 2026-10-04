@@ -2,9 +2,7 @@ import { useState } from "react";
 import "./header.style.css";
 
 export function Header() {
-  const [aberto, setAberto] = useState(false);
   const [menuAberto, setMenuAberto] = useState(false);
-  const [texto, setTexto] = useState("");
   const fecharMenu = () => setMenuAberto(false);
   return (
     <>
@@ -33,12 +31,17 @@ export function Header() {
           </li>
           <li className="header-li">
             <a className="header-a" href="#" onClick={fecharMenu}>
-              Sobre
+              O cartório
             </a>
           </li>
           <li className="header-li">
             <a className="header-a" href="#" onClick={fecharMenu}>
-              Contato
+              Tabela de custas
+            </a>
+          </li>
+          <li className="header-li">
+            <a className="header-a" href="#" onClick={fecharMenu}>
+              Dúvidas
             </a>
           </li>
           <li className="header-li-mobile">
@@ -48,33 +51,14 @@ export function Header() {
           </li>
         </ul>
         <div className="search">
-          <input
-            type="text"
-            placeholder="Pesquisar..."
-            value={texto}
-            className={aberto ? "search-input aberto" : "search-input"}
-            onChange={(e) => setTexto(e.target.value)}
-          />
-          <button
-            type="button"
-            className="search-btn"
-            onClick={() => {
-              setAberto(!aberto);
-              setMenuAberto(false);
-            }}
-            aria-label="Abrir pesquisa"
-          >
-            <i className="fi fi-rs-search"></i>
-          </button>
           <a className="header-a1" href="#">
-            Fale conosco
+            Ligar (42)99806-7505
           </a>
           <button
             type="button"
             className={menuAberto ? "menu-btn aberto" : "menu-btn"}
             onClick={() => {
               setMenuAberto(!menuAberto);
-              setAberto(false);
             }}
             aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
             aria-expanded={menuAberto}

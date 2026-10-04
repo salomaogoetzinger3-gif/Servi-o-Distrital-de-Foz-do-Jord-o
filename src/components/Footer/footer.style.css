@@ -1,17 +1,18 @@
 .footer {
-  background-color: #174f79;
+  background-color: #03122a;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px;
   padding: 4vw var(--gutter);
   min-height: 350px;
   align-items: center;
+  border-top: 5px solid #b98f3a;
 }
 
 .footer-img-text {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 16px;
 }
 
 .footer-logo {
@@ -21,9 +22,11 @@
 
 .footer-paragraf {
   color: #c8dde9;
-  font-size: 20x;
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-family: "Playfair Display", Georgia, serif;
   width: 500px;
   max-width: 100%;
+  line-height: normal;
 }
 
 .footer-list-align {
@@ -56,7 +59,7 @@
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  background-color: #174f79;
+  background-color: #03122a;
   border-top: 1px solid #4f6f80;
   color: #fff;
 }
@@ -96,5 +99,45 @@
   .footer-list-align {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
+  }
+}
+
+.footer-titulo {
+  color: #f4f5f7;
+  font-size: clamp(34px, 3vw, 46px);
+  line-height: 95%;
+  font-weight: 800;
+  font-family: "Playfair Display SC", Georgia, serif;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-titulo span {
+  color: #f4f5f7;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 108%;
+  font-weight: 500;
+  font-family: "Public Sans", Arial, sans-serif;
+}
+
+.footer-hr {
+  width: 70%;
+  border: 2px solid #c9a24d;
+  border-radius: 50px;
+}
+
+.footer-subtitulo {
+  color: #c3cbda;
+  font-size: clamp(12px, 1.2vw, 16px);
+  line-height: 155%;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+@media (max-width: 900px) {
+  .footer-titulo {
+    align-items: center;
   }
 }

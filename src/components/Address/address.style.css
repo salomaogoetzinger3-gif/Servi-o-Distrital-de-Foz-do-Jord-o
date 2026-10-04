@@ -14,7 +14,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
-  padding: max(1.5vw, 24px) 0;
 }
 
 .address-text {
@@ -109,7 +108,6 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: top center;
-    padding: 44vw 0 48px;
   }
 
   .address-text {

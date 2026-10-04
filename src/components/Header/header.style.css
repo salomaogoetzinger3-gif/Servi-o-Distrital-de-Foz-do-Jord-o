@@ -85,17 +85,27 @@
 
 .header-a {
   text-decoration: none;
-  color: #6f8798;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
+  color: #dde1e8;
+  font-family: "Public Sans", Arial, sans-serif;
+  font-size: clamp(15px, 1.4vw, 19px);
+  padding-bottom: 6px;
+  border-bottom: 3px solid transparent;
+  border-radius: 3px;
+  transition: border-color 0.3s;
+}
+
+.header-a:hover {
+  border-bottom-color: #e3c98a;
 }
 
 .header-a1 {
   text-decoration: none;
-  font-size: 16px;
+  font-size: clamp(14px, 1.2vw, 17px);
   padding: 14px 20px;
-  border-radius: 50px;
-  background-color: #1aa7d9;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  background: transparent;
+  border: 2px solid #e3c98a;
   color: #fff;
   white-space: nowrap;
 }
@@ -105,37 +115,6 @@
   align-items: center;
   gap: 16px;
   flex-shrink: 0;
-}
-
-.search-input {
-  width: 0;
-  min-width: 0;
-  padding: 0;
-  border: none;
-  opacity: 0;
-  transition:
-    width 0.3s ease,
-    opacity 0.3s ease,
-    padding 0.3s ease;
-}
-
-.search-input.aberto {
-  width: clamp(140px, 16vw, 300px);
-  padding: 12px;
-  border: 1px solid #1aa7d9;
-  border-radius: 50px;
-  opacity: 1;
-}
-
-.search-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-}
-
-.fi-rs-search {
-  font-size: 20px;
 }
 
 .menu-btn {
@@ -211,16 +190,6 @@
     display: block;
     width: 100%;
     padding: 14px 20px;
-  }
-
-  .search-input.aberto {
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 0;
-    right: 0;
-    width: auto;
-    z-index: 21;
-    background-color: #fff;
   }
 }
 

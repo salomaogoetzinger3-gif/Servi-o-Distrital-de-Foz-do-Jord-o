@@ -5,61 +5,49 @@ export function Footer() {
     <>
       <section className="footer">
         <div className="footer-img-text">
-          <img className="footer-logo" width={400} src="/logo-servico-distrital.png" alt="" />
-          <p className="footer-paragraf">
-            Serviços de registro civil com segurança jurídica, acolhimento e
-            compromisso com a cidadania.
-          </p>
+          <h1 className="footer-titulo">
+            SERVIÇO DISTRITAL <span>DE FOZ DO JORDÃO</span>
+            <hr className="footer-hr" />
+            <p className="footer-paragraf">
+              Tabelionato e Registro Civil das pessoas naturais. Atende o
+              municipio de Foz do Jordão, comarca de Guarapuava, Paraná
+            </p>
+          </h1>
         </div>
         <div className="footer-list-align">
           <ul className="footer-list">
             <li className="footer-icon">
-              <p className="footer-icon-list">SERVIÇOS</p>
+              <p className="footer-icon-list">Responsaveis</p>
             </li>
             <li className="footer-icon">
               <a href="#" className="footer-icon-a">
-                Nascimento
+                Titular: Celson Luiz Pacheco
               </a>
             </li>
             <li className="footer-icon">
               <a href="#" className="footer-icon-a">
-                Casamento
+                Substituta: Odynéia Kaise Dalla Cort
               </a>
             </li>
             <li className="footer-icon">
               <a href="#" className="footer-icon-a">
-                Óbitos
-              </a>
-            </li>
-            <li className="footer-icon">
-              <a href="#" className="footer-icon-a">
-                Certidões
+                Escrevente: Cleonice de Jesus Amancio
               </a>
             </li>
           </ul>
           <>
             <ul className="footer-list">
               <li className="footer-icon">
-                <p className="footer-icon-list">ATENDIMENTO</p>
+                <p className="footer-icon-list">Dados oficiais</p>
               </li>
               <li className="footer-icon">
                 <a href="#" className="footer-icon-a">
-                  Documentos necessários
+                  CNS 08.330-3
                 </a>
               </li>
               <li className="footer-icon">
                 <a href="#" className="footer-icon-a">
-                  Dúvidas frequentes
-                </a>
-              </li>
-              <li className="footer-icon">
-                <a href="#" className="footer-icon-a">
-                  Fale conosco
-                </a>
-              </li>
-              <li className="footer-icon">
-                <a href="#" className="footer-icon-a">
-                  Privacidade
+                  CNPJ 06.208.455/0001-83
                 </a>
               </li>
             </ul>
