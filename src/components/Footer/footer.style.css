@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: 0;
 }
 
 .footer-logo {
@@ -24,9 +25,10 @@
   color: #c8dde9;
   font-size: clamp(15px, 1.5vw, 18px);
   font-family: "Playfair Display", Georgia, serif;
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
   line-height: normal;
+  overflow-wrap: anywhere;
 }
 
 .footer-list-align {
@@ -111,6 +113,8 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .footer-titulo span {
