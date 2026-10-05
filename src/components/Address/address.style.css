@@ -1,119 +1,128 @@
 .address {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: 100%;
-  max-width: 100%;
-  background:
-    linear-gradient(
-      to left,
-      #eef4fa 0%,
-      #eef4fa 48%,
-      rgba(238, 244, 250, 0) 100%
-    ),
-    url("/foto-cartorio-address.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
-}
-
-.address-text {
-  width: 600px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  grid-column: 2;
-  margin: 0 auto;
-  padding: 0 clamp(16px, 3vw, 40px);
-  box-sizing: content-box;
-  max-width: calc(100% - 2 * clamp(16px, 3vw, 40px));
+  background-color: #fff;
+  margin: 4vw var(--gutter);
+  padding: clamp(18px, 2.5vw, 36px);
+  border-radius: 8px;
 }
 
-.address-titulo {
-  color: #294a63;
-  font-size: clamp(32px, 4vw, 58px);
-  line-height: 108%;
-  font-weight: 300;
-}
-
-.hr {
-  width: 100px;
-  border: 3px solid #1aa7d9;
-  border-radius: 50px;
-}
-
-.address-paragrafo {
-  color: #6f8798;
-  font-size: 16px;
-  line-height: 155%;
-  font-weight: 400;
-}
-
-.address-info-lista {
+.address-info-list li {
   display: flex;
-  list-style: none;
-  justify-content: space-between;
-  padding: 2vw;
+  gap: clamp(16px, 2.5vw, 40px);
+  padding: clamp(14px, 1.8vw, 25px) 0;
+  border-top: 1px solid #dde1e8;
 }
 
-.address-info-item {
-  text-align: center;
+.address-info-list li:first-child {
+  border-top: none;
+}
+
+.mapa {
+  flex: 1.2;
+  min-width: 0;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.address-info-texto1 {
-  color: #6f8798;
-  font-size: 24px;
-  line-height: 155%;
-  font-weight: 300;
-}
-
-.address-info-texto2 {
-  color: #294a63;
-  font-size: 24px;
-  line-height: 108%;
-  font-weight: 500;
 }
 
 .mapa iframe {
   display: block;
+  flex: 1;
   width: 100%;
-  height: clamp(280px, 35vw, 500px);
+  min-height: clamp(220px, 24vw, 360px);
   border: 0;
+  border-radius: 8px;
+}
+
+.address ul {
+  list-style: none;
+}
+
+.address-info h1 {
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.address-info-list li h4 {
+  font-size: clamp(15px, 1.3vw, 18px);
+  overflow-wrap: anywhere;
+}
+
+.address-info-list li p {
+  font-size: clamp(13px, 1.05vw, 15px);
+}
+
+.address > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.address-info {
+  padding: 0 clamp(16px, 2.5vw, 36px) clamp(16px, 2.5vw, 36px);
+}
+
+.address-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 1vw, 14px);
+  margin-top: clamp(12px, 1.5vw, 20px);
+}
+
+.button-map,
+.button-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: clamp(13px, 1.1vw, 16px);
+  padding: clamp(10px, 1.2vw, 15px) clamp(14px, 1.8vw, 22px);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .button-map {
-  text-decoration: none;
-  font-size: 16px;
-  padding: 16px;
-  border-radius: 50px;
-  background-color: #1aa7d9;
   color: #fff;
-  align-self: flex-start;
+  background-color: #03122a;
+  border: 1px solid #03122a;
+}
+
+.button-copy {
+  color: #03122a;
+  background-color: transparent;
+  border: 1px solid #03122a;
 }
 
 @media (max-width: 900px) {
   .address {
-    grid-template-columns: minmax(0, 1fr);
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(238, 244, 250, 0) 0,
-        rgba(238, 244, 250, 0) 30vw,
-        #eef4fa 56vw
-      ),
-      url("/foto-cartorio-address.png");
-    background-color: #eef4fa;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: top center;
+    flex-direction: column;
   }
 
-  .address-text {
-    grid-column: 1;
-    width: 640px;
-    padding: 0 var(--pad);
-    max-width: calc(100% - 2 * var(--pad));
+  .mapa iframe {
+    height: clamp(200px, 45vw, 300px);
+    min-height: 0;
+  }
+}
+
+/* Celular: rótulo acima do valor */
+@media (max-width: 600px) {
+  .address-info-list li {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* Celular: botões em largura total */
+@media (max-width: 480px) {
+  .button-map,
+  .button-copy {
+    flex: 1 1 100%;
+  }
+}
+
+/* Telas grandes: card mais alto */
+@media (min-width: 1440px) {
+  .mapa iframe {
+    min-height: clamp(360px, 26vw, 520px);
   }
 }

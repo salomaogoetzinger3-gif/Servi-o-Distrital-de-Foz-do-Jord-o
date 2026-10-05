@@ -74,7 +74,7 @@ export function Questions() {
                 Quais documentos levar para casar no civil?
               </label>
 
-              <p className="response">
+              <div className="response">
                 Cada noivo leva:
                 <ul>
                   <li style={{ listStyle: "inside" }}>
@@ -99,7 +99,7 @@ export function Questions() {
                   Depois da entrega dos documentos, o cartório publica os
                   proclamas, e a habilitação vale por 90 dias para a celebração
                 </strong>
-              </p>
+              </div>
             </li>
             <li className="question-item">
               <input type="checkbox" name="acordeon" id="quinta" />

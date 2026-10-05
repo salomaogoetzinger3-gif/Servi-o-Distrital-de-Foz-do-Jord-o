@@ -53,7 +53,7 @@ export function Notary() {
               <a href="#" className="notary-person">
                 <h3>OD</h3>
                 <div className="notary-person-aligh">
-                  <h2>Odynéia Kaise Dalla Cort</h2>
+                  <h2>Odynéia Kaize de Oliveira Dalla Cort</h2>
                   <p>Oficial substituta</p>
                 </div>
               </a>
@@ -62,7 +62,7 @@ export function Notary() {
               <a href="#" className="notary-person">
                 <h3>CA</h3>
                 <div className="notary-person-aligh">
-                  <h2>Cleonice de Jesus Amancio</h2>
+                  <h2>Cleonice de Jesus Amancio Roberto</h2>
                   <p>Escrevente</p>
                 </div>
               </a>
