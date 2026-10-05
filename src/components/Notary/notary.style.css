@@ -1,0 +1,140 @@
+.text-notary {
+  padding: 4vw var(--gutter) 1.5vw;
+}
+
+.text-notary-titulo {
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.2;
+  font-weight: 500;
+  color: #294a63;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.notary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0 var(--gutter) 4vw;
+  gap: 5vw;
+}
+
+.notary-left-list {
+  list-style: none;
+  background-color: #fff;
+  padding: clamp(18px, 2.5vw, 36px) clamp(16px, 2.5vw, 36px);
+  gap: clamp(10px, 1.2vw, 15px);
+  border: 1px solid #dde1e8;
+  border-radius: 8px;
+}
+
+.notary-left-list li {
+  display: flex;
+  padding: clamp(14px, 1.8vw, 25px) 0;
+  gap: clamp(16px, 2.5vw, 40px);
+  border-top: 1px solid #c3cbda;
+}
+
+.notary-left-list li:first-child {
+  border-top: none;
+}
+
+.notary-left-list li h4,
+.notary-person h2 {
+  font-size: clamp(15px, 1.3vw, 18px);
+  overflow-wrap: anywhere;
+}
+
+.notary-left-list li p,
+.notary-person p {
+  font-size: clamp(13px, 1.05vw, 15px);
+}
+
+@media (max-width: 900px) {
+  .notary {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 var(--pad) 48px;
+    gap: 40px;
+  }
+
+  .notary-person {
+    max-width: none;
+  }
+}
+
+/* Celular: rótulo acima do valor */
+@media (max-width: 600px) {
+  .notary-left-list li {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.notary-right {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 25px);
+  min-width: 0;
+}
+
+.notary-right-title {
+  text-transform: uppercase;
+  letter-spacing: clamp(2px, 0.4vw, 5px);
+  font-size: clamp(12px, 1.05vw, 15px);
+  color: #d9b766;
+}
+
+.notary-right-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.2vw, 15px);
+}
+
+.notary-person {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(14px, 2vw, 25px);
+  text-decoration: none;
+  background-color: #03122a;
+  padding: clamp(10px, 1.5vw, 18px);
+  border-radius: 8px;
+  width: 100%;
+  max-width: clamp(320px, 38vw, 640px);
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.notary-person-aligh {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.notary-person h3 {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: clamp(44px, 4.5vw, 64px);
+  aspect-ratio: 1;
+  border: 1px solid #d9b766;
+  border-radius: 50%;
+  font-size: clamp(16px, 1.6vw, 24px);
+}
+.notary-person h3 {
+  color: #d9b766;
+}
+
+.notary-person h2 {
+  color: #fff;
+}
+
+.notary-person p {
+  color: #5a6475;
+  font-family: "Public Sans", Arial, sans-serif;
+}
+
+.notary-person h2,
+.notary-person p {
+  grid-column: 2;
+}

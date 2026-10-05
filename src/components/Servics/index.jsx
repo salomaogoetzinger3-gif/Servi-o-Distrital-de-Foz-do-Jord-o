@@ -11,7 +11,7 @@ export function Servics() {
       <section className="servics">
         <div className="servics-left">
           <div className="servics-components">
-            <img src="src/assets/registro-civil-pessoas.svg" alt="" />
+            <img src="./registro-civil-pessoas.png" alt="" />
             <div>
               <h2>Registro civil</h2>
               <p>Os registros da vida de cada pessoa</p>
@@ -70,7 +70,7 @@ export function Servics() {
         </div>
         <div className="servics-right">
           <div className="servics-components">
-            <img src="src/assets/tabelionato-notas.svg" alt="" />
+            <img src="./tabelionato-notas.png" alt="" />
             <div>
               <h2 className="servics-right-h2">Tabelionato de notas</h2>
               <p>Documentos com fé pública para negócios e acordos</p>

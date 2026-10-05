@@ -15,6 +15,7 @@
 .servics-components h2 {
   font-size: clamp(18px, 1.8vw, 26px);
   line-height: 1.2;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 .servics-components p {
@@ -80,11 +81,6 @@
 
 .servics-item {
   border-top: 1px solid #c3cbda;
-  padding: clamp(12px, 1.4vw, 18px) 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
 }
 
 .servics-item p {
@@ -92,19 +88,30 @@
   font-size: clamp(13px, 1.05vw, 15px);
 }
 
-.servics-item::after {
-  content: ">";
-  color: #d9b766;
-  font-size: clamp(16px, 1.5vw, 20px);
-  flex-shrink: 0;
-}
-
 .servics-a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 12px;
+  padding: clamp(12px, 1.4vw, 18px) 0;
   text-decoration: none;
 }
 
+.servics-a h3,
+.servics-a p {
+  grid-column: 1;
+}
+
+.servics-a::after {
+  content: ">";
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  color: #d9b766;
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+
 .text-servics {
-  padding: 4vw var(--gutter);
+  padding: 4vw var(--gutter) 1.5vw;
 }
 
 .text-servics-titulo {
@@ -112,6 +119,7 @@
   line-height: 1.2;
   font-weight: 500;
   color: #294a63;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
 /* Tablet e celular: cards empilhados */
