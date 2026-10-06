@@ -1,0 +1,172 @@
+.boxNotary {
+  background-color: #123056;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+  width: 70%;
+  margin: clamp(32px, 6vw, 96px) auto clamp(8px, 1.5vw, 24px);
+  color: #fff;
+  padding: clamp(20px, 3.5vw, 56px);
+  border-radius: 8px;
+  gap: clamp(20px, 3vw, 48px);
+}
+
+.BoxNotary-number {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: var(--num);
+  aspect-ratio: 1;
+  border: 1px solid #d9b766;
+  border-radius: 50%;
+  font-size: clamp(14px, 1.6vw, 24px);
+  color: #d9b766;
+}
+
+.boxNotary-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 30px);
+  min-width: 0;
+}
+
+.boxNotary-left h1 {
+  font-size: clamp(22px, 2.6vw, 38px);
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.boxNotary-left p {
+  font-size: clamp(14px, 1.2vw, 17px);
+  line-height: 1.6;
+  color: #dde1e8;
+}
+
+.boxNotary-left a {
+  align-self: flex-start;
+  font-size: clamp(13px, 1.1vw, 16px);
+  text-decoration: none;
+  color: #121a2b;
+  background: linear-gradient(180deg, #d9b766, #b98f3a);
+  font-weight: 600;
+  border-radius: 5px;
+  padding: clamp(14px, 1.5vw, 20px);
+  text-align: center;
+}
+
+.boxNotary-right {
+  min-width: 0;
+}
+
+.boxNotary-right-div-list {
+  --num: clamp(36px, 4vw, 64px);
+  --gap: clamp(14px, 1.8vw, 28px);
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+}
+
+.boxNotary-right-div-list li {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.8vw, 12px);
+}
+
+.boxNotary-right-div-list h2 {
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.25;
+}
+
+.boxNotary-right-div-list p {
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.5;
+  color: #dde1e8;
+}
+
+/* Linha ligando os números */
+.boxNotary-right-div-list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--num) / 2);
+  left: calc(var(--num) + 8px);
+  width: calc(100% + var(--gap) - var(--num) - 16px);
+  height: 1px;
+  background-color: #d9b766;
+}
+
+/* Notebooks e tablets grandes */
+@media (max-width: 1200px) {
+  .boxNotary {
+    width: 84%;
+  }
+}
+
+/* Tablet: card em uma coluna */
+@media (max-width: 1000px) {
+  .boxNotary {
+    grid-template-columns: minmax(0, 1fr);
+    width: 90%;
+  }
+}
+
+/* Celular: passos empilhados */
+@media (max-width: 600px) {
+  .boxNotary {
+    width: calc(100% - 2 * var(--pad));
+  }
+
+  .boxNotary-left a {
+    align-self: stretch;
+  }
+
+  .boxNotary-right-div-list {
+    flex-direction: column;
+    --gap: 24px;
+  }
+
+  .boxNotary-right-div-list li {
+    display: grid;
+    grid-template-columns: var(--num) minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: start;
+  }
+
+  .boxNotary-right-div-list .BoxNotary-number {
+    grid-row: 1 / span 2;
+  }
+
+  .boxNotary-right-div-list li h2,
+  .boxNotary-right-div-list li p {
+    grid-column: 2;
+  }
+
+  /* Linha vertical entre os números */
+  .boxNotary-right-div-list li:not(:last-child)::after {
+    top: calc(var(--num) + 8px);
+    left: calc(var(--num) / 2);
+    width: 1px;
+    height: calc(100% + var(--gap) - var(--num) - 16px);
+  }
+}
+
+/* Telas grandes */
+@media (min-width: 1600px) {
+  .boxNotary-left h1 {
+    font-size: 42px;
+  }
+
+  .boxNotary-left p {
+    font-size: 18px;
+  }
+
+  .boxNotary-right-div-list h2 {
+    font-size: 22px;
+  }
+
+  .boxNotary-right-div-list p {
+    font-size: 16px;
+  }
+}

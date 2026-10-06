@@ -1,5 +1,6 @@
 import "./App.css";
 import { Address } from "./components/Address";
+import { BoxNotary } from "./components/BoxNotary";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <Informations />
       <Servics />
+      <BoxNotary />
       <Notary />
       <Questions />
       <Address />
