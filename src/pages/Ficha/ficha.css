@@ -45,8 +45,15 @@
   text-decoration: underline;
 }
 
+.f-voltar .f-miolo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+}
+
 .f-voltar-rodape {
-  margin-top: 0.75rem;
+  margin: 0.75rem 1.5rem 0 0;
 }
 
 /* Cabeçalho */

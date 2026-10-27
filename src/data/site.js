@@ -17,7 +17,7 @@ export const endereco = `${site.rua}, ${site.bairro}, ${site.cidade}, ${site.cep
 
 export const nav = [
   ['Início', '/'],
-  ['Serviços', '/servicos/casamento-civil'],
+  ['Serviços', '/#servicos'],
   ['O Cartório', '/o-cartorio'],
   ['Tabela de custas', '/tabela-de-custas'],
   ['Dúvidas', '/duvidas'],

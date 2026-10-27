@@ -440,6 +440,7 @@ export function Ficha() {
       <nav className="f-voltar" aria-label="Navegação">
         <div className="f-miolo">
           <Link to="/"><span aria-hidden="true">←</span> Voltar ao início</Link>
+          <Link to="/#servicos">Ver todos os serviços</Link>
         </div>
       </nav>
       <header className="f-topo">
@@ -474,6 +475,7 @@ export function Ficha() {
             <p>{site.email} · {site.telefone}</p>
             <p>{endereco}</p>
             <Link className="f-voltar-rodape" to="/"><span aria-hidden="true">←</span> Voltar ao início</Link>
+            <Link className="f-voltar-rodape" to="/#servicos">Ver todos os serviços</Link>
           </div>
           <p>
             Informação de caráter geral, conferida com o texto das leis federais em {conferido}. Cada caso pode exigir
