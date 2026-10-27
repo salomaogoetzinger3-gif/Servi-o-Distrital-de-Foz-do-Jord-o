@@ -54,7 +54,7 @@
   gap: 20px;
 }
 
-input[type="checkbox"] {
+.question-item input[type="checkbox"] {
   display: none;
 }
 
@@ -81,7 +81,7 @@ input[type="checkbox"] {
   color: #b98f3a;
 }
 
-input[type="checkbox"]:checked + .question-label::after {
+.question-item input[type="checkbox"]:checked + .question-label::after {
   content: "\2212";
 }
 
@@ -96,7 +96,7 @@ input[type="checkbox"]:checked + .question-label::after {
     padding 0.5;
 }
 
-input[type="checkbox"]:checked + .question-label + .response {
+.question-item input[type="checkbox"]:checked + .question-label + .response {
   max-height: 600px;
   border-radius: 0 0 8px 8px;
   transition: ease 1s;

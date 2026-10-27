@@ -10,6 +10,7 @@ import { Contato } from './pages/Contato'
 import { Custas } from './pages/Custas'
 import { Duvidas } from './pages/Duvidas'
 import { SegundaVia } from './pages/SegundaVia'
+import { Ficha } from './pages/Ficha'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/servicos/casamento-civil" element={<Casamento />} />
+        <Route path="/servicos/:slug" element={<Ficha />} />
         <Route path="/o-cartorio" element={<Cartorio />} />
         <Route path="/tabela-de-custas" element={<Custas />} />
         <Route path="/duvidas" element={<Duvidas />} />

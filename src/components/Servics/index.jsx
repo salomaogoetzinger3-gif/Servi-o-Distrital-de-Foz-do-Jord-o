@@ -1,5 +1,46 @@
 import "./servics.style.css";
 
+const registroCivil = [
+  ["Registro de nascimento", "Gratuito, com a 1ª certidão", "registro-de-nascimento"],
+  ["Habilitação e casamento civil", "Documentos, proclamas e celebração", "habilitacao-e-casamento"],
+  ["Registro de óbito", "Orientação para a família", "registro-de-obito"],
+  ["Reconhecimento de paternidade", "Direto no cartório, sem processo", "reconhecimento-de-paternidade"],
+  ["Averbação e retificações", "Divórcio, mudança de nome e correções", "averbacao-e-retificacoes"],
+  ["Certidão e 2ª via", "Nascimento, casamento e óbito", "certidao-e-2-via"],
+  ["Interdições e tutelas", "Registro de decisões judiciais", "interdicoes-e-tutelas"],
+];
+
+const tabelionato = [
+  ["Reconhecimento de firma e autenticação", "Na hora, com documento original", "firma-e-autenticacao"],
+  ["Procurações e substabelecimentos", "Para bancos, INSS, imóveis e veículos", "procuracoes"],
+  ["Compra e venda e doação", "Escrituras de imóveis e outros bens", "compra-venda-e-doacao"],
+  ["União estável e pacto antenupcial", "Declaração e regime de bens do casal", "uniao-estavel-e-pacto"],
+  ["Divórcio e inventário em cartório", "Quando há acordo, com advogado", "divorcio-e-inventario"],
+  ["Ata notarial", "Prova de fatos, conversas e sites", "ata-notarial"],
+  ["Emancipação", "Para maiores de 16 anos, com os pais", "emancipacao"],
+];
+
+function Lista({ itens }) {
+  return (
+    <ul className="servics-list">
+      {itens.map(([titulo, texto, slug]) => (
+        <li className="servics-item" key={slug}>
+          <a
+            href={`/servicos/${slug}`}
+            className="servics-a"
+            target="_blank"
+            rel="noopener"
+            aria-label={`${titulo}: abrir a ficha em uma nova guia`}
+          >
+            <h3>{titulo}</h3>
+            <p>{texto}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function Servics() {
   return (
     <>
@@ -17,56 +58,7 @@ export function Servics() {
               <p>Os registros da vida de cada pessoa</p>
             </div>
           </div>
-          <ul className="servics-list">
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Registro de nascimento</h3>
-                <p>Gratuito, com a 1ª certidão</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Habilitação e casamento civil</h3>
-                <p>Documentos, proclamas e celebração</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Registro de óbito</h3>
-                <p>Orientação para a familía</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Reconhecimento de paternidade</h3>
-                <p>Direto no cartório, sem processo</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Averbação e retificações</h3>
-                <p>Divórcio, mudança de nome e correçõoes</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Certidão e 2ª via</h3>
-                <p>Nascimento, casamento e óbito</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Interdições e tutelas</h3>
-                <p>Registro de decisões judiciais</p>
-              </a>
-            </li>
-          </ul>
+          <Lista itens={registroCivil} />
         </div>
         <div className="servics-right">
           <div className="servics-components">
@@ -76,56 +68,7 @@ export function Servics() {
               <p>Documentos com fé pública para negócios e acordos</p>
             </div>
           </div>
-          <ul className="servics-list">
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Reconhecimento de firma e autenticação</h3>
-                <p>Na hora, com documento original</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Procurações e substabelecimentos</h3>
-                <p>Para bancos, INSS, imóveis e veículos</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Compra e venda e doação</h3>
-                <p>Escrituras de imóveis e outros bens</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>União estável e pacto antenupcial</h3>
-                <p>Declaração e regime de bens do casal</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Divórcio e inventário em cartório</h3>
-                <p>Quando há acordo, com advogado</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Ata notorial</h3>
-                <p>Prova de fatos, conversas e sites</p>
-              </a>
-            </li>
-
-            <li className="servics-item">
-              <a href="#" className="servics-a">
-                <h3>Emancipação</h3>
-                <p>Para maiores de 16 anos, com os pais</p>
-              </a>
-            </li>
-          </ul>
+          <Lista itens={tabelionato} />
         </div>
       </section>
     </>

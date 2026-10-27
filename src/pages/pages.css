@@ -1,11 +1,16 @@
 :root {
-  --fs-titulo: clamp(24px, 3vw, 40px);
-  --fs-box: clamp(18px, 1.8vw, 26px);
-  --fs-item: clamp(15px, 1.3vw, 18px);
-  --fs-texto: clamp(13px, 1.1vw, 16px);
-  --fs-menor: clamp(13px, 1.05vw, 15px);
-  --fs-pergunta: clamp(16px, 1.4vw, 20px);
-  --fs-resposta: clamp(16px, 1.3vw, 19px);
+  --fs-capa: clamp(2rem, 4.5vw, 3rem);
+  --fs-titulo: clamp(1.5rem, 3vw, 2.5rem);
+  --fs-box: clamp(1.125rem, 1.8vw, 1.625rem);
+  --fs-item: 1.15rem;
+  --fs-texto: 1.15rem;
+  --fs-menor: 1.15rem;
+  --fs-pergunta: 1.15rem;
+  --fs-resposta: 1.15rem;
+  --fs-rotulo: clamp(0.6875rem, 0.9vw, 0.8125rem);
+  --fs-numero: clamp(1rem, 1.6vw, 1.5rem);
+  --fs-campo: 1.15rem;
+  --fs-mini: 0.75rem;
 }
 
 .conteudo {
@@ -26,7 +31,7 @@
 }
 
 .rotulo {
-  font-size: clamp(11px, 0.9vw, 13px);
+  font-size: var(--fs-rotulo);
   font-weight: 600;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -114,7 +119,7 @@
   border: 1px solid var(--azul-marinho);
   border-radius: 4px;
   color: #fff;
-  font: 600 16px var(--fonte-texto);
+  font: 600 var(--fs-texto) var(--fonte-texto);
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -170,6 +175,13 @@ a.cartao:hover,
   white-space: nowrap;
 }
 
+@media (max-width: 600px) {
+  .tabela .mais {
+    white-space: normal;
+    text-align: right;
+  }
+}
+
 .nota {
   font-size: var(--fs-menor);
 }
@@ -203,7 +215,7 @@ a.cartao:hover,
   border-radius: 50%;
   background: var(--azul-marinho);
   color: #fff;
-  font: 500 14px var(--fonte-titulos);
+  font: 500 0.875rem var(--fonte-titulos);
 }
 
 .checks {
@@ -341,7 +353,7 @@ a.cartao:hover,
   border: 1px solid #c9ced8;
   border-radius: 4px;
   color: var(--tinta);
-  font: 400 16px var(--fonte-texto);
+  font: 400 var(--fs-campo) var(--fonte-texto);
 }
 
 .campo textarea {
@@ -350,7 +362,7 @@ a.cartao:hover,
 }
 
 .campo small {
-  font-size: 12px;
+  font-size: var(--fs-mini);
   font-weight: 400;
   color: var(--cinza-azulado);
 }
@@ -475,7 +487,7 @@ summary::-webkit-details-marker {
 
 summary::after {
   content: "+";
-  font-size: 20px;
+  font-size: 1.5em;
   line-height: 1;
   color: var(--dourado);
 }
@@ -550,7 +562,7 @@ details ul {
   width: 60px;
   height: 60px;
   margin-bottom: 12px;
-  font: 500 22px var(--fonte-titulos);
+  font: 500 var(--fs-numero) var(--fonte-titulos);
   color: var(--dourado-claro);
 }
 
@@ -629,7 +641,7 @@ details ul {
 }
 
 .soma > span {
-  font-size: 22px;
+  font-size: var(--fs-numero);
   color: var(--dourado);
 }
 
@@ -656,7 +668,7 @@ details ul {
 
 .tabela .cab {
   background: var(--branco-gelo);
-  font-size: 12px;
+  font-size: var(--fs-mini);
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -681,7 +693,7 @@ details ul {
   padding: 4px 10px;
   background: #e6f4ec;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: var(--fs-mini);
   font-weight: 600;
   color: var(--verde-aberto);
 }
@@ -703,6 +715,19 @@ details ul {
   font: 500 var(--fs-texto) var(--fonte-texto);
   white-space: nowrap;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .abas {
+    flex-wrap: wrap;
+    gap: 0;
+    overflow: visible;
+  }
+
+  .abas button {
+    flex: 1 1 auto;
+    padding: 10px 12px;
+  }
 }
 
 .abas button.atual {
@@ -737,7 +762,7 @@ details ul {
 .passos .num {
   width: 40px;
   height: 40px;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--dourado-claro);
 }
 

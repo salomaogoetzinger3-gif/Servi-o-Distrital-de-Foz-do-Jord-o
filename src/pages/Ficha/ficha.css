@@ -1,0 +1,967 @@
+.ficha {
+  --f-noite: #0c1a36;
+  --f-papel: #fdfcf6;
+  --f-borda: #c9ced8;
+  --f-creme: #f3efe6;
+  --f-selo: #f1e3bf;
+  --f-selo-texto: #6b5318;
+  --fs-mini: 1.15rem;
+
+  background: var(--f-papel);
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.f-miolo {
+  padding: 0 5vw;
+}
+
+/* Volta para o início (fixa no topo, porque a ficha abre em outra guia) */
+
+.f-voltar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0.6rem 0;
+  background: var(--f-noite);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.f-voltar a,
+.f-voltar-rodape {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--dourado-claro);
+  font: 600 var(--fs-texto) var(--fonte-texto);
+  text-decoration: none;
+}
+
+.f-voltar a:hover,
+.f-voltar-rodape:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.f-voltar .f-miolo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+}
+
+.f-voltar-rodape {
+  margin: 0.75rem 1.5rem 0 0;
+}
+
+/* Cabeçalho */
+
+.f-topo {
+  padding: 1.75rem 0;
+  background: var(--f-noite);
+  border-bottom: 0.375rem solid var(--dourado);
+}
+
+.f-topo .f-miolo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.f-topo-rotulo {
+  margin-bottom: 0.5rem;
+  color: var(--texto-sobre-azul);
+  font-size: var(--fs-rotulo);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.f-marca {
+  display: block;
+  color: #fff;
+  font: 600 var(--fs-titulo) / 1.15 var(--fonte-titulos);
+  text-decoration: none;
+}
+
+.f-marca span {
+  display: block;
+  color: var(--dourado);
+}
+
+.f-topo address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  color: var(--texto-sobre-azul);
+  font-size: var(--fs-mini);
+  font-style: normal;
+}
+
+.f-topo address strong,
+.f-topo address a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Folha do formulário */
+
+.f-papel {
+  padding: 2.5rem 0 3rem;
+}
+
+.f-selo {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--f-selo);
+  border-radius: 2rem;
+  color: var(--f-selo-texto);
+  font-size: var(--fs-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.f-papel h1 {
+  margin-top: 1rem;
+  color: var(--f-noite);
+  font: 600 var(--fs-capa) / 1.15 var(--fonte-titulos);
+}
+
+.f-texto {
+  max-width: 50rem;
+  margin-top: 0.5rem;
+  color: var(--cinza-azulado);
+  font-size: var(--fs-item);
+  line-height: 1.5;
+}
+
+.f-como {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--f-creme);
+  border-left: 0.25rem solid var(--dourado);
+  font-size: var(--fs-texto);
+  line-height: 1.5;
+}
+
+.f-secao {
+  margin-top: 2.25rem;
+}
+
+.f-secao-topo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.f-secao h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--f-noite);
+  font: 600 var(--fs-box) / 1.25 var(--fonte-titulos);
+}
+
+.f-num {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--f-noite);
+  border-radius: 50%;
+  color: #fff;
+  font: 600 0.875rem var(--fonte-texto);
+}
+
+.f-secao-topo em {
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+}
+
+.f-sub {
+  display: block;
+  width: fit-content;
+  margin: 0.75rem 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 0.125rem solid var(--dourado);
+  color: var(--f-noite);
+  font-size: var(--fs-rotulo);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Campos */
+
+.f-linha {
+  display: grid;
+  grid-template-columns: var(--cols);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.f-campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0.5rem 0.75rem 0.25rem;
+  background: #fff;
+  border: 1px solid var(--f-borda);
+  border-radius: 0.375rem;
+  cursor: text;
+}
+
+.f-campo:focus-within {
+  border-color: var(--dourado);
+  box-shadow: 0 0 0 0.1875rem rgba(201, 162, 77, 0.25);
+}
+
+.f-campo > span {
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.f-campo input,
+.f-campo select,
+.f-campo textarea {
+  width: 100%;
+  min-height: 1.9rem;
+  padding: 0.25rem 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--tinta);
+  font: var(--fs-campo) var(--fonte-texto);
+}
+
+.f-campo select {
+  appearance: none;
+  padding-right: 1.5rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%235a6475' stroke-width='1.6'/%3E%3C/svg%3E") right 0.25rem center / 0.75rem no-repeat;
+  cursor: pointer;
+}
+
+.f-local {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+}
+
+.f-local select:first-child {
+  flex: 1 1 8rem;
+}
+
+.f-local select + select {
+  flex: 2 1 10rem;
+}
+
+/* Documento de identidade: faixa própria com os campos do tipo escolhido */
+
+.f-doc {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem 1rem;
+  background: #fff;
+  border: 1px solid var(--f-borda);
+  border-radius: 0.375rem;
+}
+
+.f-doc-topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.f-doc-topo span {
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+  font-weight: 500;
+}
+
+.f-doc-topo select {
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.4rem 2rem 0.4rem 0.75rem;
+  border: 1px solid var(--f-borda);
+  border-radius: 0.375rem;
+  appearance: none;
+  background: var(--f-creme) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%235a6475' stroke-width='1.6'/%3E%3C/svg%3E") right 0.6rem center / 0.75rem no-repeat;
+  color: var(--f-noite);
+  font: 600 var(--fs-texto) var(--fonte-texto);
+  cursor: pointer;
+}
+
+.f-doc-campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem 1.25rem;
+}
+
+.f-doc-campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.f-doc-campo small {
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+}
+
+.f-doc-campo input,
+.f-doc-campo select {
+  width: 100%;
+  min-height: 2.2rem;
+  padding: 0.25rem 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--f-borda);
+  border-radius: 0;
+  outline: 0;
+  color: var(--tinta);
+  font: var(--fs-campo) var(--fonte-texto);
+}
+
+.f-doc-campo select {
+  appearance: none;
+  padding-right: 1.5rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%235a6475' stroke-width='1.6'/%3E%3C/svg%3E") right 0.25rem center / 0.75rem no-repeat;
+  cursor: pointer;
+}
+
+.f-doc-campo input:focus,
+.f-doc-campo select:focus {
+  border-bottom-color: var(--dourado);
+}
+
+.f-local select:has(option[value='']:checked),
+.f-doc-campo select:has(option[value='']:checked),
+.f-campo > select:has(option[value='']:checked) {
+  color: #a3aab6;
+}
+
+.f-local select:disabled,
+.f-doc-campo select:disabled {
+  cursor: not-allowed;
+}
+
+.f-campo input::placeholder,
+.f-tabela-linha input::placeholder,
+.f-traco::placeholder {
+  color: #a3aab6;
+}
+
+.f-area textarea {
+  --linha: 2rem;
+  min-height: auto;
+  line-height: var(--linha);
+  background: repeating-linear-gradient(transparent 0 calc(var(--linha) - 1px), var(--linha-clara, #e3e6ec) calc(var(--linha) - 1px) var(--linha));
+  resize: vertical;
+}
+
+.f-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Opções */
+
+.f-grupo {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.f-grupo legend {
+  margin-bottom: 0.35rem;
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+  font-weight: 500;
+}
+
+.f-grupo > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.f-opcao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-texto);
+  cursor: pointer;
+}
+
+.f-opcao input[type='checkbox'],
+.f-opcao input[type='radio'],
+.f-regime input {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  background: #fff;
+  border: 1.5px solid var(--cinza-azulado);
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.f-opcao input:checked,
+.f-regime input:checked {
+  background: var(--f-noite);
+  border-color: var(--f-noite);
+}
+
+.f-opcao input:checked::after,
+.f-regime input:checked::after {
+  content: '';
+  width: 0.35rem;
+  height: 0.6rem;
+  margin-top: -0.1rem;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.f-opcao input:focus-visible,
+.f-regime input:focus-visible,
+.f-traco:focus-visible {
+  outline: 2px solid var(--dourado);
+  outline-offset: 2px;
+}
+
+.f-traco {
+  width: 9rem;
+  padding: 0.1rem 0.25rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--cinza-azulado);
+  color: var(--tinta);
+  font: var(--fs-texto) var(--fonte-texto);
+}
+
+.f-traco[type='date'] {
+  width: 11rem;
+}
+
+/* Duas colunas (noivo e noiva, herdeiros...) */
+
+.f-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+}
+
+.f-herdeiro-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-remover {
+  padding: 0.25rem 0.5rem;
+  background: none;
+  border: 0;
+  color: var(--cinza-azulado);
+  font: var(--fs-mini) var(--fonte-texto);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.f-mais {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  padding: 0.6rem 1.1rem;
+  background: #fff;
+  border: 1.5px dashed var(--dourado);
+  border-radius: 0.375rem;
+  color: var(--f-noite);
+  font: 600 var(--fs-texto) var(--fonte-texto);
+  cursor: pointer;
+}
+
+.f-mais span {
+  font-size: 1.4em;
+  line-height: 1;
+  color: var(--dourado);
+}
+
+.f-mais:hover {
+  background: var(--f-creme);
+}
+
+/* Regimes de bens */
+
+.f-regimes {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.f-regime {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid var(--f-borda);
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.f-regime input {
+  margin-top: 0.2rem;
+}
+
+.f-regime strong {
+  font-size: var(--fs-texto);
+}
+
+.f-regime small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+  line-height: 1.5;
+}
+
+/* Tabelas de bens */
+
+.f-tabela {
+  margin-bottom: 1rem;
+}
+
+.f-tabela-cab,
+.f-tabela-linha {
+  display: grid;
+  grid-template-columns: var(--cols);
+  gap: 1rem;
+}
+
+.f-tabela-cab {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--cinza-azulado);
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+}
+
+.f-tabela-celula {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* O nome da coluna fica no cabeçalho; no celular ele aparece em cada campo. */
+.f-tabela-celula span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.f-tabela-linha input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.4rem 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--f-borda);
+  font: var(--fs-campo) var(--fonte-texto);
+}
+
+/* Avisos, assinaturas e uso do cartório */
+
+.f-aviso {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--f-creme);
+  border-left: 0.25rem solid var(--dourado);
+}
+
+.f-aviso > strong {
+  font-size: var(--fs-rotulo);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.f-aviso .f-lista {
+  margin-top: 0.5rem;
+}
+
+.f-assinaturas {
+  display: grid;
+  grid-template-columns: var(--cols);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.f-secao .f-assinaturas {
+  margin-top: 2.5rem;
+}
+
+.f-assinaturas span {
+  display: block;
+  border-top: 1px solid var(--f-noite);
+}
+
+.f-assinaturas small {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+}
+
+.f-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.f-btn {
+  padding: 0.85rem 1.4rem;
+  background: var(--f-noite);
+  border: 1.5px solid var(--f-noite);
+  border-radius: 0.375rem;
+  color: #fff;
+  font: 600 var(--fs-texto) var(--fonte-texto);
+  cursor: pointer;
+}
+
+.f-btn.claro {
+  background: #fff;
+  color: var(--f-noite);
+}
+
+.f-uso {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem 2rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px dashed var(--f-borda);
+  border-radius: 0.375rem;
+  color: var(--cinza-azulado);
+  font-size: var(--fs-mini);
+}
+
+.f-uso strong {
+  color: var(--f-noite);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.f-uso span {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.f-uso i {
+  display: block;
+  width: 8rem;
+  border-bottom: 1px solid var(--f-borda);
+}
+
+/* O que a lei exige */
+
+.f-lei {
+  padding: 3rem 0;
+  background: var(--f-noite);
+  color: var(--texto-sobre-azul);
+}
+
+.f-lei h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  color: #fff;
+  font: 500 var(--fs-titulo) / 1.2 var(--fonte-titulos);
+}
+
+.f-lei h2 small {
+  color: var(--dourado);
+  font: 600 var(--fs-rotulo) var(--fonte-texto);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.f-lei-intro {
+  margin-top: 0.5rem;
+  font-size: var(--fs-texto);
+}
+
+.f-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.f-card {
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: #fff;
+  border-top: 0.25rem solid var(--dourado);
+  border-radius: 0.375rem;
+  color: var(--tinta);
+}
+
+.f-card.largo {
+  grid-column: 1 / -1;
+}
+
+.f-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--f-noite);
+  font: 600 var(--fs-item) / 1.3 var(--fonte-titulos);
+}
+
+.f-lista {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.f-lista li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: var(--fs-texto);
+  line-height: 1.55;
+}
+
+.f-lista li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--dourado);
+  border-radius: 50%;
+}
+
+.f-chip {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  background: var(--f-selo);
+  border-radius: 1rem;
+  color: var(--f-selo-texto);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.f-base {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: var(--fs-mini);
+  line-height: 1.6;
+}
+
+.f-base strong {
+  color: var(--dourado);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Rodapé */
+
+.f-rodape {
+  padding: 2rem 0;
+  background: #081327;
+  color: var(--texto-sobre-azul);
+  font-size: var(--fs-mini);
+  line-height: 1.6;
+}
+
+.f-rodape .f-miolo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 3rem;
+}
+
+.f-rodape strong {
+  color: #fff;
+}
+
+/* Celular */
+
+/* Tablet: linhas com muitos campos quebram em vez de espremer */
+
+@media screen and (max-width: 1000px) {
+  .f-linha {
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+
+  .f-chip {
+    white-space: normal;
+  }
+}
+
+/* Celular */
+
+@media screen and (max-width: 700px) {
+  .f-linha,
+  .f-cols,
+  .f-cards,
+  .f-assinaturas,
+  .f-rodape .f-miolo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .f-topo address {
+    align-items: flex-start;
+  }
+
+
+  .f-tabela-cab {
+    display: none;
+  }
+
+  .f-tabela-linha {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid var(--f-borda);
+    border-radius: 0.375rem;
+  }
+
+  .f-tabela-celula span {
+    position: static;
+    width: auto;
+    height: auto;
+    clip: auto;
+    color: var(--cinza-azulado);
+    font-size: var(--fs-mini);
+  }
+
+  .f-opcao {
+    flex-wrap: wrap;
+    padding: 0.2rem 0;
+  }
+
+  .f-opcao input[type='checkbox'],
+  .f-opcao input[type='radio'],
+  .f-regime input {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .f-acoes .f-btn {
+    flex: 1 1 100%;
+  }
+
+  .f-uso {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .f-uso i {
+    flex: 1;
+    width: auto;
+  }
+
+  .f-assinaturas {
+    gap: 2.5rem;
+  }
+}
+
+/* Impressão: só a folha, compacta, cada parte começa em página nova */
+
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  .ficha {
+    --fs-capa: 1.6rem;
+    --fs-titulo: 1.3rem;
+    --fs-box: 1rem;
+    --fs-item: 0.8rem;
+    --fs-texto: 0.75rem;
+    --fs-campo: 0.75rem;
+    --fs-rotulo: 0.6rem;
+    --fs-mini: 0.6rem;
+  }
+
+  .f-miolo {
+    padding: 0;
+  }
+
+  .f-voltar,
+  .f-voltar-rodape,
+  .f-acoes,
+  .f-mais,
+  .f-remover {
+    display: none;
+  }
+
+  .f-papel {
+    padding: 1rem 0;
+  }
+
+  .f-secao {
+    margin-top: 1rem;
+    break-inside: avoid;
+  }
+
+  .f-campo {
+    padding: 0.3rem 0.5rem 0.6rem;
+  }
+
+  .ficha ::placeholder {
+    color: transparent;
+  }
+
+  .f-campo select,
+  .f-doc-campo select,
+  .f-doc-topo select {
+    background-image: none;
+  }
+
+  .f-local select:has(option[value='']:checked),
+  .f-doc-campo select:has(option[value='']:checked),
+  .f-doc-topo select:has(option[value='']:checked),
+  .f-campo > select:has(option[value='']:checked) {
+    color: transparent;
+  }
+
+  .f-linha,
+  .f-tabela,
+  .f-card {
+    break-inside: avoid;
+  }
+
+  .f-lei,
+  .f-parte + .f-parte {
+    break-before: page;
+  }
+}

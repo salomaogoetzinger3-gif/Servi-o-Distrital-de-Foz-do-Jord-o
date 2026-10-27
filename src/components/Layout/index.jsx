@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { endereco, nav, rodape, site } from '../../data/site'
 import { Ir } from '../Ui'
 import './layout.css'
@@ -19,6 +19,13 @@ function Marca({ logo }) {
 
 export function Cabecalho() {
   const [aberto, setAberto] = useState(false)
+  const { hash } = useLocation()
+
+  // "Início" e "Serviços" (/#servicos) têm o mesmo caminho; a âncora decide qual fica marcado.
+  const marcado = (para) => ({ isActive }) => {
+    const ancora = para.includes('#') ? para.slice(para.indexOf('#')) : ''
+    return isActive && ancora === hash ? 'active' : ''
+  }
 
   return (
     <>
@@ -32,7 +39,7 @@ export function Cabecalho() {
         <Marca logo />
         <nav className={aberto ? 'links aberto' : 'links'}>
           {nav.map(([nome, para]) => (
-            <NavLink key={para} to={para} end onClick={() => setAberto(false)}>
+            <NavLink key={para} to={para} end className={marcado(para)} onClick={() => setAberto(false)}>
               {nome}
             </NavLink>
           ))}
