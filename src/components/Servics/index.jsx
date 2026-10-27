@@ -3,7 +3,7 @@ import "./servics.style.css";
 export function Servics() {
   return (
     <>
-      <div className="text-servics">
+      <div className="text-servics" id="servicos">
         <h1 className="text-servics-titulo">
           Encontre o serviço que você precisa
         </h1>

@@ -6,8 +6,8 @@
 }
 
 :root {
-  --pad: clamp(16px, 5vw, 78px);
-  --gutter: 4vw;
+  --pad: max(16px, min(5vh, 5vw));
+  --gutter: max(16px, min(5vh, 5vw));
   /* Cores principais */
   --azul-marinho: #0a1f3f; /* cor principal: botões, títulos, bloco de Notas */
   --azul-noite: #03122a; /* rodapé e parte mais escura do topo */
@@ -66,4 +66,20 @@ p,
 a,
 label {
   overflow-wrap: break-word;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

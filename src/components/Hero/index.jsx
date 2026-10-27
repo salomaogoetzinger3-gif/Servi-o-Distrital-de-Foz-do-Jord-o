@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./hero.style.css";
 
 export function Hero() {
@@ -18,12 +19,12 @@ export function Hero() {
             cidade!
           </p>
           <div className="hero-btn-align">
-            <a href="#" className="hero-btn-1">
+            <a href="#servicos" className="hero-btn-1">
               Ver serviços
             </a>
-            <a href="#" className="hero-btn-2">
+            <Link to="/segunda-via" className="hero-btn-2">
               Solicitar 2ª Via de certidão
-            </a>
+            </Link>
           </div>
         </div>
       </section>

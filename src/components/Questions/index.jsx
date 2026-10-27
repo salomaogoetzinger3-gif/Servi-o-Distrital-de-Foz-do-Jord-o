@@ -1,3 +1,4 @@
+import { site } from "../../data/site";
 import "./questions.style.css";
 
 export function Questions() {
@@ -10,7 +11,7 @@ export function Questions() {
             Perguntas que mais recebemos
           </h1>
           <p>
-            Não encontrou sua dúvida? ligue para (42) 99806-7505 no horario de
+            Não encontrou sua dúvida? ligue para {site.telefone} no horário de
             atendimento
           </p>
         </div>
@@ -113,7 +114,7 @@ export function Questions() {
                 <strong>
                   Ao valor do ato somam-se os fundos e taxas previstos em lei, e
                   todos vêm discriminados no recibo. Para saber o valor exato do
-                  seu caso, ligue para (42) 99806-7505 ou peça um orçamento por
+                  seu caso, ligue para {site.telefone} ou peça um orçamento por
                   e-mail.
                 </strong>
               </p>

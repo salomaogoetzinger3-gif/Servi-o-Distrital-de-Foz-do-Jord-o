@@ -1,3 +1,4 @@
+import { site } from "../../data/site";
 import "./notary.style.css";
 
 export function Notary() {
@@ -29,11 +30,11 @@ export function Notary() {
             </li>
             <li>
               <p>CNS</p>
-              <h4>08.330-3</h4>
+              <h4>{site.cns}</h4>
             </li>
             <li>
               <p>CNPJ</p>
-              <h4>06.208.455/0001-83</h4>
+              <h4>{site.cnpj}</h4>
             </li>
           </ul>
         </div>

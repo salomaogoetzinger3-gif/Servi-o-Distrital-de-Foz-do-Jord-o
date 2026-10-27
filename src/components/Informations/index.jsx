@@ -1,3 +1,4 @@
+import { site } from "../../data/site";
 import "./informations.style.css";
 
 const agora = new Date();
@@ -31,7 +32,7 @@ export function Informations() {
             {estaAberto() ? "Aberto agora" : "Fechado no momento"}, até as
             17h{" "}
           </h3>
-          <p>Rua. Gov. prof parigot de souza, 44 </p>
+          <p>{site.rua}</p>
         </div>
       </div>
       <div>
@@ -44,7 +45,7 @@ export function Informations() {
       <div>
         <i className="fa-solid fa-shield" />
         <div className="informations-text">
-          <h3>CNS 08.330-3</h3> <p>Cartório oficial, desde 2004</p>
+          <h3>CNS {site.cns}</h3> <p>Cartório oficial, desde 2004</p>
         </div>
       </div>
     </section>

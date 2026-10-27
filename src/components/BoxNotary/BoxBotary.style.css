@@ -1,9 +1,8 @@
 .boxNotary {
-  background-color: #123056;
+  background-color: #03122a;
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
-  width: 70%;
-  margin: clamp(32px, 6vw, 96px) auto clamp(8px, 1.5vw, 24px);
+  margin: 4vw var(--gutter) 1.5vw;
   color: #fff;
   padding: clamp(20px, 3.5vw, 56px);
   border-radius: 8px;
@@ -97,27 +96,22 @@
   background-color: #d9b766;
 }
 
-/* Notebooks e tablets grandes */
-@media (max-width: 1200px) {
-  .boxNotary {
-    width: 84%;
-  }
-}
-
 /* Tablet: card em uma coluna */
 @media (max-width: 1000px) {
   .boxNotary {
     grid-template-columns: minmax(0, 1fr);
-    width: 90%;
+  }
+}
+
+/* Mesma margem lateral dos outros componentes */
+@media (max-width: 900px) {
+  .boxNotary {
+    margin: 48px var(--pad) 24px;
   }
 }
 
 /* Celular: passos empilhados */
 @media (max-width: 600px) {
-  .boxNotary {
-    width: calc(100% - 2 * var(--pad));
-  }
-
   .boxNotary-left a {
     align-self: stretch;
   }

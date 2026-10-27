@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./BoxBotary.style.css";
 
 export function BoxNotary() {
@@ -9,7 +10,7 @@ export function BoxNotary() {
           Se o registro foi feito em Foz do Jordão, você pode pedir pelo
           telefone ou e-mail e só vir buscar
         </p>
-        <a href="#">Pedir minha certidão</a>
+        <Link to="/segunda-via">Pedir minha certidão</Link>
       </div>
       <section className="boxNotary-right">
         <div></div>
