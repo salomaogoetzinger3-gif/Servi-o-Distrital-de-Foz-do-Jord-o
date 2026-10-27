@@ -12,15 +12,15 @@ const certidao = {
 
 const passos = [
   ['Entregue os documentos', 'Os noivos vão juntos ao cartório para abrir o processo de habilitação.'],
-  ['Edital de proclamas', 'O cartório publica o edital, que fica exposto por 15 dias.'],
-  ['Habilitação aprovada', 'Com tudo certo, a habilitação vale por 90 dias para a celebração.'],
-  ['Celebração do casamento', 'No cartório ou em outro local escolhido pelo casal, com data agendada.'],
+  ['Publicidade da habilitação', 'O cartório publica a habilitação em meio eletrônico e, com tudo em ordem, emite o certificado em até 5 dias.'],
+  ['Habilitação aprovada', 'O certificado vale por 90 dias, e o casamento pode ser feito em qualquer cartório de registro civil.'],
+  ['Celebração do casamento', 'No cartório, em outro local escolhido pelo casal ou por videoconferência, com data agendada.'],
 ]
 
 const relacionados = [
-  ['União estável e pacto antenupcial', '/contato'],
+  ['União estável e pacto antenupcial', '/servicos/uniao-estavel-e-pacto'],
   ['2ª via da certidão de casamento', '/segunda-via'],
-  ['Averbação de divórcio', '/contato'],
+  ['Averbação de divórcio', '/servicos/averbacao-e-retificacoes'],
 ]
 
 export function Casamento() {
@@ -45,7 +45,7 @@ export function Casamento() {
           <div className="bloco">
             <p className="rotulo">Registro civil</p>
             <h2>O que é</h2>
-            <p>O casamento civil é o ato que oficializa a união perante a lei. Antes da cerimônia, o casal passa pela habilitação, em que o cartório confere os documentos e publica o edital de proclamas.</p>
+            <p>O casamento civil é o ato que oficializa a união perante a lei. Antes da cerimônia, o casal passa pela habilitação, em que o cartório confere os documentos e dá publicidade aos proclamas em meio eletrônico.</p>
           </div>
 
           <div className="bloco">
@@ -99,7 +99,7 @@ export function Casamento() {
             <h2>Resumo</h2>
             <Linhas itens={[
               ['Quem comparece', 'Os dois noivos'],
-              ['Edital de proclamas', '15 dias'],
+              ['Certificado de habilitação', 'Em até 5 dias'],
               ['Validade da habilitação', '90 dias'],
               ['Testemunhas', '2, maiores de 18'],
               ['Local da cerimônia', 'Cartório ou outro local'],
